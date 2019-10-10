@@ -10,7 +10,7 @@ x = 50
 y = 320
 width = 40
 height = 60
-vel = 10
+vel = 6
 isJump = False
 jumpCount = 10
 left = False
@@ -25,8 +25,8 @@ def redrawgamewindow():
 
 
 run = True
-while run: #The Main Loop
-    pygame.time.delay(1)
+while run:  #The Main Loop
+    pygame.time.delay(30)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -46,7 +46,7 @@ while run: #The Main Loop
             neg = 1
             if jumpCount < 0:
                 neg = -1
-            y -= (jumpCount ** 2) * 0.4 * neg
+            y -= (jumpCount ** 2) * 0.3 * neg
             jumpCount -= 1
         else:
             isJump = False
